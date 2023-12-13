@@ -6,18 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Color Palette</title>
   </head>
+  <h1>Palette Picker</h1>
   <body>
-    <div id="app">
-   <form id = "palette-input">
-<div>
-<label for = ""></label>
-<input type="text =" name="" placeholder="">
-</div>
-
-   </form>
+    <div class="wrapper">
+      <main>
+        <div class="first"></div>
+        <form id="palette-picker">
+          <h2>Add a palette</h2>
+          Palette Title: <input type="text" required><br>
+          Color #1 <input type="color" required><br>
+          Color #2 <input type="color" required><br>
+          Color #3 <input type="color" required><br>
+          Temperature <br>
+          <input type="radio" name="temperature" required> Warm
+          <input type="radio" name="temperature" required> Neutral
+          <input type="radio" name="temperature" required> Cool
+          <button type="submit">Submit</button>
+        </form>
+      </main>
     </div>
     <script type="module" src="main.js"></script>
   </body>
-</html>
+  </html>
 
 

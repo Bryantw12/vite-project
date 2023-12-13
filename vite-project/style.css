@@ -1,1 +1,18 @@
+h1 {
+  color: rgb(188, 18, 18);
+}
 
+body {
+  background-color: rgb(24, 22, 22);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh
+  
+}
+
+
+.wrapper {
+width: 420px;
+background: grey; 
+}
