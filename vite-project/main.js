@@ -1,11 +1,8 @@
 import './style.css';
-import { getEl } from './utils.js';
+import { getEl, renderCard, } from './utils.js';
+import palettes from './palettes.json'
+import { v4 as uuidv4 } from 'uuid';
 
-const handleSubmit = (e) => {
-  e.preventDefault();
-  const formObj = Object.fromEntries(new FormData(e.target));
-  console.log(formObj);
-};
 
 const getLocalStorageKey = (key) => {
   try {
@@ -32,8 +29,31 @@ const addValue = (value) => {
   setValue('form-data', [...values, value]);
 };
 
-const main = () => {
-  getEl('#palette-picker').addEventListener('submit', handleSubmit);
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  const {title, color1,color2,color3,temperature}= Object.fromEntries(new FormData(e.target));
+ const formObj = {
+  uuid: uuidv4(),
+  title, 
+  colors:[color1,color2,color3],
+  temperature,
+ 
+ }
+  renderCard(formObj, '#palettes');
+  addValue(formObj);
+
 };
 
+const main = () => {
+  getEl('#palette-picker').addEventListener('submit', handleSubmit);
+  // getEl(".wrapper").append(renderCard())
+
+ renderCard(palettes[0], '#palettes')
+};
+
+
+
 main();
+
+

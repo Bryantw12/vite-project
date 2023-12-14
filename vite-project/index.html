@@ -13,18 +13,21 @@
         <div class="first"></div>
         <form id="palette-picker">
           <h2>Add a palette</h2>
-          <label>Palette Title: <input type="text" name ="Title" required>  </label> <br>
+          <label>Palette Title: <input type="text" name ="title" required>  </label> <br>
           <label >Color #1 <input type="color" name ="color1"  required></label><br>
           <label >Color #2 <input type="color" name ="color2" required></label><br>
           <label> Color #3 <input type="color" name ="color3" required></label> <br>
           Temperature <br>
-          <label> <input type="radio" name="temperature" required> Warm </label>
-          <label> <input type="radio" name="temperature" required> Neutral</label>
-          <label><input type="radio" name="temperature" required> Cool </label>
+          <label> <input type="radio" name="temperature" value=" warm" required> Warm </label>
+          <label> <input type="radio" name="temperature" value = "Neutral" required> Neutral</label>
+          <label><input type="radio" name="temperature"  value = "Cool" required> Cool </label>
       
           <button type="submit">Submit</button>
         </form>
       </main>
+    </div>
+    <div id='palettes'>
+      
     </div>
     <script type="module" src="main.js"></script>
   </body>
